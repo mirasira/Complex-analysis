@@ -1,0 +1,329 @@
+\documentclass{article}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{datetime}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+\usepackage{enumitem}
+
+%definice čato používanejch příkazů
+\newcommand{\mi}{\mathrm{i}}
+\newcommand{\re}{\mathrm{Re}}
+\newcommand{\im}{\mathrm{Im}}
+\newcommand{\inv}{\mathrm{inv}}
+\newcommand{\res}{\mathrm{res}}
+%definice data formátu používanýho na úvodní stránce
+\newdateformat{normaldate}{%
+\twodigit{\THEDAY}.\twodigit{\THEMONTH}.\THEYEAR}
+
+%klikací obsah
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+\renewcommand*\contentsname{Obsah}
+\date{\normaldate\today}
+\title{Skupinový anal}
+\author{Miroslav D.}
+\begin{document}
+\maketitle{}
+
+
+
+\definecolor{qqqqff}{rgb}{0,0,1}
+\definecolor{ffqqqq}{rgb}{1,0,0}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+    \clip(-4.559768796141332,-5.51268778710339) rectangle (6.592170053800237,5.199306578866264);
+    \draw [line width=2pt,color=ffqqqq] (0.8571428571428571,0.2857142857142857) circle (0.3194382824999699cm);
+    \draw [line width=2pt,color=ffqqqq] (0.8461538461538461,0.3076923076923077) circle (0.34401045807689073cm);
+    \draw [line width=2pt,color=ffqqqq] (0.8333333333333334,0.3333333333333333) circle (0.37267799624996495cm);
+    \draw [line width=2pt,color=ffqqqq] (0.8181818181818182,0.36363636363636365) circle (0.4065578140908709cm);
+    \draw [line width=2pt,color=ffqqqq] (0.8,0.4) circle (0.447213595499958cm);
+    \draw [line width=2pt,color=ffqqqq] (0.7777777777777778,0.4444444444444444) circle (0.49690399499995325cm);
+    \draw [line width=2pt,color=ffqqqq] (0.75,0.5) circle (0.5590169943749475cm);
+    \draw [line width=2pt,color=ffqqqq] (0.7142857142857143,0.5714285714285714) circle (0.6388765649999399cm);
+    \draw [line width=2pt,color=ffqqqq] (0.6666666666666666,0.6666666666666666) circle (0.7453559924999299cm);
+    \draw [line width=2pt,color=ffqqqq] (0.6,0.8) circle (0.894427190999916cm);
+    \draw [line width=2pt,color=ffqqqq] (0.5,1) circle (1.118033988749895cm);
+    \draw [line width=2pt,color=ffqqqq] (0.3333333333333333,1.3333333333333333) circle (1.4907119849998598cm);
+    \draw [line width=2pt,color=ffqqqq] (0,2) circle (2.23606797749979cm);
+    \draw [line width=2pt,color=ffqqqq] (-1,4) circle (4.47213595499958cm);
+    \draw [line width=2pt,color=ffqqqq] (3,-4) circle (4.47213595499958cm);
+    \draw [line width=2pt,color=ffqqqq] (2,-2) circle (2.23606797749979cm);
+    \draw [line width=2pt,color=ffqqqq] (1.6666666666666667,-1.3333333333333333) circle (1.4907119849998598cm);
+    \draw [line width=2pt,color=ffqqqq] (1.5,-1) circle (1.118033988749895cm);
+    \draw [line width=2pt,color=ffqqqq] (1.4,-0.8) circle (0.894427190999916cm);
+    \draw [line width=2pt,color=ffqqqq] (1.3333333333333333,-0.6666666666666666) circle (0.7453559924999299cm);
+    \draw [line width=2pt,color=qqqqff] (0.6,-0.2) circle (0.44721359549995787cm);
+    \draw [line width=2pt,color=qqqqff] (0.5555555555555556,-0.2222222222222222) circle (0.49690399499995325cm);
+    \draw [line width=2pt,color=qqqqff] (0.5,-0.25) circle (0.5590169943749475cm);
+    \draw [line width=2pt,color=qqqqff] (0.42857142857142855,-0.2857142857142857) circle (0.6388765649999398cm);
+    \draw [line width=2pt,color=qqqqff] (0.3333333333333333,-0.3333333333333333) circle (0.74535599249993cm);
+    \draw [line width=2pt,color=qqqqff] (0.2,-0.4) circle (0.8944271909999162cm);
+    \draw [line width=2pt,color=qqqqff] (0,-0.5) circle (1.118033988749895cm);
+    \draw [line width=2pt,color=qqqqff] (-0.3333333333333333,-0.6666666666666666) circle (1.4907119849998598cm);
+    \draw [line width=2pt,color=qqqqff] (-1,-1) circle (2.23606797749979cm);
+    \draw [line width=2pt,color=qqqqff] (-3,-2) circle (4.47213595499958cm);
+    \draw [line width=2pt,color=qqqqff] (5,2) circle (4.47213595499958cm);
+    \draw [line width=2pt,color=qqqqff] (3,1) circle (2.23606797749979cm);
+    \draw [line width=2pt,color=qqqqff] (2.3333333333333335,0.6666666666666666) circle (1.4907119849998598cm);
+    \draw [line width=2pt,color=qqqqff] (2,0.5) circle (1.118033988749895cm);
+    \draw [line width=2pt,color=qqqqff] (1.8,0.4) circle (0.8944271909999161cm);
+    \draw [line width=2pt,color=qqqqff] (1.6666666666666667,0.3333333333333333) circle (0.7453559924999298cm);
+    \draw [line width=2pt,color=qqqqff] (1.5714285714285714,0.2857142857142857) circle (0.63887656499994cm);
+    \draw [line width=2pt,color=qqqqff] (1.5,0.25) circle (0.5590169943749476cm);
+    \draw [line width=2pt,color=qqqqff] (1.4444444444444444,0.2222222222222222) circle (0.4969039949999532cm);
+    \draw [line width=2pt,color=qqqqff] (1.4,0.2) circle (0.447213595499958cm);
+\end{tikzpicture}
+\newpage
+\tableofcontents
+    \section*{Základy}
+        \[a+b\mi=\sqrt{a^2+b^2}e^{\arctan\frac{b}{a}}\]
+        \[\ln(z)=\ln|z|+\arg z\]
+
+    \section{týden}
+        \subsection{Určení argumentu a absolutní hodnoty komplexního čísla}
+            Absolutní hodnota
+                \[|z| = \sqrt{(\mbox{Re}\:z)^2 + (\mbox{Im}\:z)^2}\]
+                \[z = -3+3i,\quad |z|=\sqrt{(-3)^2+(3)^2}=3\]
+            Argument
+                \[\mbox{arg }z = \arctan\left(\frac{\mbox{Re }z}{\mbox{Im }z}\right)\]
+                \[\mbox{arg}\left(\frac{\sqrt{3}+\mi}{1+\mi}\right)=
+                \frac{\arg(\sqrt{3}+\mi)}{\arg(1+\mi)}=\arg(\sqrt{3}+\mi)-\arg(1+\mi)
+                =\frac{\pi}{6}-\frac{\pi}{4}=-\frac{\pi}{12}\]
+        \subsection{Jednoduché důkazy}
+            Dokažte, že pro každé $z\in\mathbb{C}$ platí $|z|^2=z\overline{z}$
+                \[|a+b|^2=(a+b\mi)(a-b\mi)\]
+                \[\sqrt{a^2+b^2}^2=a^2+b^2\]
+        \subsection{Moivreova věta}
+                \[(\cos(x)+\mi\sin(x))^n=\cos(nx)+\mi\sin(nx)\]
+                {\bf Příklad:}\\
+                Nalezněte všechny hodnoty $\sqrt{3+4\mi}$
+                \[\sqrt{3+4\mi}=\sqrt{5e^{\arctan\frac{4}{3}}}=(5(\cos(\arctan\left(\frac{4}{3}\right)+2k\pi)+
+                \mi\sin(\arctan\left(\frac{4}{3}\right)+2k\pi)))^{\frac{1}{2}}\]
+                \[=\sqrt{5}(\cos\left(\frac{\arctan\left(\frac{4}{3}\right)}{2}+k\pi\right)+
+                \mi\sin\left(\frac{\arctan\left(\frac{4}{3}\right)}{2}+k\pi\right)),
+                \qquad k = 0,1\]
+        \subsection{Geometrické znázornění komplexních množin}
+            Poloroviny
+                \[\re z<2, \im z\geq 5\]
+                \[|z+\mi|>|z-3-2\mi|\]
+            Kružnice, mezikruží
+                \[|z+2|<4\]
+                \[2<|z+2|<4\]
+            Úhly
+            \[\frac{\pi}{2}<\arg(z)\leq\frac{3\pi}{4}\]
+        \subsection{Konvergence řad}
+            \subsubsection*{Nutná podmínka konvergence}
+                \[\sum_{n=0}^\infty C_n \:\mbox{ konverguje} \Rightarrow \lim_{n\to\infty}C_n=0\]
+            \subsubsection*{Podílové kritérium}
+                \[\lim_{n\to\infty}\frac{|C_n+1|}{|C_n|}<1 
+                \Rightarrow \sum_{n=0}^\infty |C_n| \mbox{konverguje}\]
+                \[\lim_{n\to\infty}\frac{|C_n+1|}{|C_n|}>1 
+                \Rightarrow \sum_{n=0}^\infty |C_n| \mbox{diverguje}\]
+            \subsubsection*{Odmocninové kritérium}
+                \[\lim_{n\to\infty}\sqrt{|C_n|}<1 
+                \Rightarrow \sum_{n=0}^\infty |C_n| \mbox{konverguje}\]
+                \[\lim_{n\to\infty}\sqrt{|C_n|}>1 
+                \Rightarrow \sum_{n=0}^\infty |C_n| \mbox{diverguje}\]
+                {\bf Příklad:}
+                \[\sum_{n=0}^\infty(2+i)^{-n}\Rightarrow\lim_{n\to\infty}\sqrt[n]{|2+i|^{-n}}=
+                |2+i|^{-1}=\frac{1}{\sqrt{5}}<1 \Rightarrow \mbox{Konverguje}\]
+            \subsubsection*{Apolliniova kružnice}
+            \[\lambda=\frac{|z-z_1|}{|z-z_2|}\]
+    \section{týden}
+        \subsection{Mocninné řady}
+            \[\sum_{n=0}^\infty a_n(z-z_0)^n\]
+            $z$ je proměnná\\
+            $z_0$ je střed\\
+            $a_n\in\mathbb{C}$ je n-tý koeficient
+            \subsubsection*{Určení koeficientu příslušící každé k-té mocnině}
+            {\bf Příklad:}
+                \[\sum_{n=5}^{\infty}n^2(z-1+i)^{2n+1}=5^2(z-1+i)^{11}+
+                6^2(z-1+i)^{13}+7^2(z-1+i)^{15}+\dots\]
+                \[a_0=a_1=\dots=a_{10}=0\]
+                \[a_k=0,\quad\forall k\in\mathbb{N}_0:\:k=2n,\quad n\in\mathbb{N}_0 \]
+                \[a_k=\left(\frac{k-1}{2}\right)^2,\quad\forall k\in\mathbb{N}_0:
+                \:k=2n+1,\quad n\in\mathbb{N}_0 \]
+                \[a_{2n}=0\qquad\forall n\in\mathbb{N}_0\]
+                \[a_{2n+1}=\begin{cases}
+                    n^2\quad \forall n \in \mathbb{N}, \quad n\geq 5\\
+                    0,\quad \mbox{pokud } n\in{0,1,2,3,4}
+                \end{cases}\]
+
+            \subsubsection*{Určení poloměru konvergence}
+            \[\sum_{n=0}^\infty a_n(z-z_0)^n\quad \mbox{Konverguje absolutně pokud }|z-z_0|<R\]
+            \[\sum_{n=0}^\infty a_n(z-z_0)^n\quad \mbox{Diverguje pokud }|z-z_0|>R\]
+            \\
+            {\bf Příklad:}
+            \[\sum_{n=1}^{\infty}2^n(z-\mi)^n\:\Rightarrow\:\lim_{n\to\infty}\sqrt[n]{2^n|z-\mi|^n}
+            =2|z-1|\]
+            Řada konverguje absolutně pro $z\in\mathbb{C}:|z-\mi|<\frac{1}{2}$\\
+            Řada diverhuje pro $z\in\mathbb{C}:|z-\mi|>\frac{1}{2}$\\
+            Poloměr konvergence $R=\frac{1}{2}$
+            \subsubsection*{Součet řad na kruhu konvergence}
+                Záměna derivace a sumy
+                    \[\frac{d}{dz}\left(\sum_{n=0}^\infty a_n(z-z_0)^n\right)=
+                    \sum_{n=1}^\infty na_n(z-z_0)^{n-1}\]
+                Záměna integrace a sumy
+                    \[\int \left(\sum_{n=0}^{\infty}a_n(z-z_0)^n\right)dz=
+                    \sum_{n=0}^{\infty}\frac{a_n}{n+1}(z-z_0)^{n+1}+c\]
+                Základní součet geometrické řady
+                    \[\sum_{n=0}^{\infty}z^n=\frac{1}{1-z}\]
+                \\
+                {\bf Příklad:}
+                \[\sum_{n=0}^{\infty}nz^{n-1}=
+                \frac{d}{dz}\left(\sum_{n=0}^{\infty}z^{n}\right)=
+                \frac{d}{dz}\frac{1}{1-z}=\frac{1}{(1-z)^2}\]
+
+
+    \section{týden}
+        \subsection{Součet řad na kruhu konvergence 2}
+            Obecný taylor
+                \[f(z)=\sum_{n=0}^{\infty}\frac{f^{(n)}(z_0)}{n!}(z-z_0)^n\]
+            Důležité funkce
+                \[e^z=\sum_{n=0}^{\infty}\frac{z^n}{n!},\:z\in\mathbb{C},\qquad
+                ln(1-z)=-\sum_{n=1}^{\infty}\frac{z^n}{n},\:|z|<1\]
+                \[\sin z =\sum_{n=0}^{\infty}\frac{(-1)^nz^{2n+1}}{(2n+1)!},\:z\in\mathbb{C},\qquad
+                \sinh z =\sum_{n=0}^{\infty}\frac{z^{2n+1}}{(2n+1)!},\:z\in\mathbb{C}\]
+                \[\cos z =\sum_{n=0}^{\infty}\frac{(-1)^nz^{2n}}{(2n)!},\:z\in\mathbb{C},\qquad
+                \cosh z =\sum_{n=0}^{\infty}\frac{z^{2n}}{(2n)!},\:z\in\mathbb{C}\]
+                \\
+                {\bf Příklad:}
+                \[\sum_{n=0}^{\infty}\frac{z^{2n}}{n!}=
+                \sum_{n=0}^{\infty}\frac{z^{2^{n}}}{n!}=e^{z^2}\]
+        \subsection{Rozvinutí funkcí na mocninou řadu}
+            {\bf Příklad:}
+            \[\frac{1}{9+z^2}=\frac{1}{9}\frac{1}{1+\frac{z^2}{9}}=
+            \frac{1}{9}\frac{1}{1+\left(\frac{z}{3}\right)^2}=
+            \frac{1}{9}\frac{1}{1-\left(\frac{zi}{3}\right)^2}=
+            \frac{1}{9}\sum_{n=0}^{\infty}\left(\frac{zi}{3}\right)^{2n}=\]
+            \[\frac{1}{9}\sum_{n=0}^{\infty}(-1)^n\left(\frac{z^2}{9}\right)^{n}\]
+    \section{týden}
+        \subsection{M\"{o}biova transformace}
+        \[f(z):=\frac{az+b}{cz+d}\]
+        Kruhová inverze
+        \[\inv_k:\mathbb{C}\cup\{\infty\}\to\mathbb{C}\cup\{\infty\}\]
+        \[\inv_k(z)=s+\frac{z^2}{\overline{z-s}},\:z\in\mathbb{C}\cup\{\infty\}\]
+
+        Inverze vůči přímce\\
+        V písemce budou jenom přímky rovnoběžné s Imaginární nebo Reálnou osou,
+        ty jdou jednoduše spočítat přes osovou souměrnost, když tomu tak není tak 
+        musíme použít tyhle vzorečky.
+        \[x_p=\frac{b^2x_1-a(by_1+c)}{a^2+b^2},\qquad 
+        y_p=\frac{a^2y_1-b(ax_1+c)}{a^2+b^2}\]
+        \[\inv(x+iy)=2x_p-x_1+i(2y_p-y_1)\]
+
+        Uvažujeme M\"{o}biovu transformace
+        \[f(z):=\frac{z+\mi}{z-\mi}\]
+
+        Na jaké množině v $\mathbb{C}\cup\{\infty\}$ zobrazí $f$ následující množina $M$?
+        \[(a)M=\{z\in\mathbb{C}||z|\leq 1\}\]
+        \[\mi\in k\Rightarrow\infty\in f(k)\: \mbox{ je přímka}\]
+    \section{týden}
+        \subsection{Křivkový integrál}
+        Dá se spočítat třema způsobama
+        \begin{enumerate}
+            \item Z definice, +funguje vždy -hodně práce
+            \item Newton-Leibnitz +jednoduché spočítat -nefunguje vždy
+            \item Cauchyho vzorec, reziduová věta - bude později
+        \end{enumerate}
+
+        \subsubsection{Z definice}
+            \[\int_{C}f(z)dz=\int_{a}^{b}f(\varphi(t))\varphi'(t)dt=
+            \int_C(u,-v)d\vec{S}+\mi\int_C(v,u)d\vec{S}\]
+        Jak parametrizovat?
+        \\
+        {\bf Příklad:}
+        \[\int_C3z^2-2z\:dz\]
+        kde křivka $C$ má parametrizaci $\varphi(t)=t+\mi t^2, t\in[0,1]$
+        \[\int_0^1(3(t+\mi t^2)-2(t-\mi t^2))(2t\mi+1)=
+        \int_0^1(3(t^2+it^3+it^3-t^4)-2t-2\mi t^2)(1+2\mi t)dt=\]
+        \[=\int_0^1(-2t+3t^2-\mi t^2+6\mi t^3-3t^4)(1+2\mi t)dt=\]
+        \[=\int_0^1(-2t+3t^2-2\mi t^2+6\mi t^3-3t^4-4\mi t^2+6\mi t^3+4t^3-12t^4-6it^5)dt\]
+        \[=\int_0^1(-2t+3t^2-6\mi t^2+12\mi t^3+4t^3-15t^4-6\mi t^5)dt=\]
+        \[=\left[-t^2+t^3-2\mi t^3+3\mi t^4+t^4-3t^5-\mi t^6\right]_0^1=
+        (-1+1-2\mi+3\mi+1-3-\mi)=-2\]
+        \subsubsection{Newton-Leibnitz}
+            \[\int_Cf(z)dz=\underbrace{F(z_2)}_{\mbox{konec}}
+            -\underbrace{F(z_1)}_{\mbox{začátek}}\qquad\mbox{ (F je primitivní funkce k $f$)}\]
+        {\bf Příklad:}
+            \[\int_C\frac{z+1}{z}dz\]
+            Kde křivka C je úsečka [0, 2-i]. Počáteční bod C je 0 a koncový 2-i
+            \\
+            Najdeme primitivní funkci k $f$
+            \[\int\frac{z+1}{z}\:dz=\int 1+\frac{1}{z}\:dz=z+\ln z\]
+            Dosadíme do Newton-Leibnitze
+            \[\mi+\frac{\pi}{2}+\mi+\frac{\pi}{2}=2\mi +\pi\]
+    \section{týden}%6
+        \subsection{Křivkový integrál 2}
+        \subsubsection{Cauchyho vzorec}
+            \[\frac{1}{2\pi\mi}\int_C\frac{f(z)}{z-z_0}dz=f(z_0)\]
+        zobecněný Cauchyho vzorec
+        \[\frac{n!}{2\pi\mi}\int_C\frac{f(z)}{(z-z_0)^{n-1}}dz=f^{(n)}(z_0)\]
+        \\
+        {\bf Příklad:}
+        \[\label{eq1}\int_C\frac{1}{z(z^2-1)dz}\]
+        $C$ je kladně orientovaná kružnice o poloměru $\frac{1}{2}$ a středu $1$.
+        Singularity jsou 0,1 a -1, v kružnici leží jenom bod 1.
+        \[\frac{f(z)}{z-1}=\frac{1}{z(z^2-1)}\:\Rightarrow\:f(z)=\frac{1}{z(z+1)}\]
+        \[\int_c\frac{f(z)}{z-1}=2\pi\mi f(0)=\pi\mi\]
+
+        {\bf Příklad:}
+        \[\int_C\frac{z}{z^4-1}dz\]
+        Kde křivka C má parametrizaci $\varphi(t)=a+ae^{\mi t}, t\in[0,2\pi], a>\frac{1}{2}$
+        \\
+        Singularity jsou v bodech $1,-1,\mi,-\mi$.
+        Parametrizavoná křivka je půlkružnice se středem na reálné ose a koncovým
+        bodem v počátku. Nejjedoduší bude použít $a=1\Rightarrow |z-1|=1$.
+        Uvnitř se nachází pouze singularita $1$.
+        \[\frac{f(z)}{z-1}=\frac{1}{(z^4)-1}\Rightarrow f(z)=\frac{1}{(z^2+1)(z+1)}\]
+        \[\int_C\frac{\frac{1}{(z^2)(z+1)}}{z-1}=2\pi\mi f(1)=\frac{\pi\mi}{2}\]
+    \section{týden}%7
+        \subsection{Laurentovy řady}
+        \[\sum_{n=-\infty}^{\infty}a_n(z-z_0)^n=
+        \underbrace{\sum_{-1}^{n=-\infty}a_n(z-z_0)^n}_{\mbox{Hlavní část}}+
+        \underbrace{\sum_{n=0}^{\infty}a_n(z-z_0)^n}_{\mbox{Regulární část}}\]
+        \\
+        {\bf Příklad:}
+        Určit oblast konvergence Laurentovy řady
+        \[\sum_{n=-\infty}^{-1}3^nz^{2n}+\sum_{n=0}^{\infty}\frac{n}{4^n}z^n\]
+        \[\lim_{n\to\infty}\sqrt[n]{\left|3^nz^{2n}\right|}=3|z^2|\:\Rightarrow\:
+        |z|<\frac{1}{\sqrt{3}}\]
+        \[\lim_{n\to\infty}\sqrt[n]{\left|\frac{n}{4^n}z^n\right|}=
+        \left|\frac{z}{4}\right|\:\Rightarrow\:|z|<4\]
+        \[P\left(0;\frac{1}{\sqrt{3}};4\right)\]
+        \\
+        
+
+    \section{týden}%9
+        \subsection{Singularity}
+            \begin{center}            
+                \begin{tabular}{|cc|}
+                    \hline
+                    Typ&$\lim_{z\to z_0}f(z)$\\
+                    \hline
+                    odstranitelná singularita& $\in \mathbb{C}$\\
+                    pól&$\infty$\\
+                    podstatná singularita &neexistuje\\
+                    \hline
+                \end{tabular}
+            \end{center}
+        \subsection{Residuum}
+
+    \section{týden}%8
+    \subsection{Reziduová věta}
+        \[\int_Cf(z)dz=2\pi\mi\sum_{j=1}^{k}\underset{z_j}{\res f}\]
+        \begin{enumerate}
+            \item res
+        \end{enumerate}
+\end{document}
