@@ -320,11 +320,30 @@
             \end{center}
         \subsection{Residuum}
 
-        \begin{enumerate}[label=\Alph*]
+        \begin{enumerate}[label=\alph*.]
             \item v $ z_0\in\mathbb{C}$
             \item v $ \infty$
         \end{enumerate}
-
+        Výpočet rezidua
+        \begin{enumerate}
+            \item Nalezení celé LŘ (zbytečně složité)
+            \item Tvrzení (6.14, 6.17)
+            \begin{enumerate}[label=\alph*.]
+                \item $z_0\in\mathbb{C}$, pól f násobnosti $k\in\mathbb{N}$:
+                    \[\res_{z_0}f=\frac{1}{(k-1)!}\lim_{z\to z_0}\frac{d^{k-1}}{dz^{k-1}}
+                    \left[(z-z_0)^kf(z)\right]\]
+                \item $\infty$ odstranitelná singularita:
+                    \[\res_{\infty}f=\lim_{z\to\infty}z(f(\infty)-f(z))=\lim_{z\to\infty}z^2f'(z)\]
+                \item $\infty$ pól násobnosti $k\in\mathbb{N}$:
+                    \[\res f =\]
+            \end{enumerate}
+            \item Tvrzení (6.15)
+                f,g holomorfní v $z_0\in\mathbb{C},\:z_0$ je jednoduchý kořen $g$, pak
+                \[res_{z_0}\frac{f}{g}=\frac{f(z_0)}{g'/z_0}\]
+            \item Trvzení (6.16)
+                f holomorfní v $z_0\in\mathbb{C}, g$ má v $z_0 $ jednonásobný pól pak
+                \[res_{z_0}(fg)=f(z_0)res_{z_0}g\]
+    \end{enumerate}
     \section{týden}%8
     \subsection{Reziduová věta}
         \[\int_Cf(z)dz=2\pi\mi\sum_{j=1}^{k}\underset{z_j}{\res f}\]
