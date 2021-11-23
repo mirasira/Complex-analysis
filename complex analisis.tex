@@ -86,10 +86,6 @@
 \end{tikzpicture}
 \newpage
 \tableofcontents
-    \section*{Základy}
-        \[a+b\mi=\sqrt{a^2+b^2}e^{\arctan\frac{b}{a}}\]
-        \[\ln(z)=\ln|z|+\arg z\]
-
     \section{týden}
         \subsection{Určení argumentu a absolutní hodnoty komplexního čísla}
             Absolutní hodnota
@@ -192,7 +188,7 @@
                 \[f(z)=\sum_{n=0}^{\infty}\frac{f^{(n)}(z_0)}{n!}(z-z_0)^n\]
             Důležité funkce
                 \[e^z=\sum_{n=0}^{\infty}\frac{z^n}{n!},\:z\in\mathbb{C},\qquad
-                ln(1-z)=-\sum_{n=1}^{\infty}\frac{z^n}{n},\:|z|<1\]
+                \ln(1-z)=-\sum_{n=1}^{\infty}\frac{z^n}{n},\:|z|<1\]
                 \[\sin z =\sum_{n=0}^{\infty}\frac{(-1)^nz^{2n+1}}{(2n+1)!},\:z\in\mathbb{C},\qquad
                 \sinh z =\sum_{n=0}^{\infty}\frac{z^{2n+1}}{(2n+1)!},\:z\in\mathbb{C}\]
                 \[\cos z =\sum_{n=0}^{\infty}\frac{(-1)^nz^{2n}}{(2n)!},\:z\in\mathbb{C},\qquad
@@ -318,8 +314,14 @@
                     \hline
                 \end{tabular}
             \end{center}
-        \subsection{Residuum}
+            
+            {\bf Příklad:}
+                Klasifikujte všechny izolované singularity funkce
+                \[f(z)=\frac{1}{\sin z}\]
+                singularity: $\{k\pi,k\in z\},\:\infty$ není izolovaná singularita
 
+
+        \subsection{Reziduum}
         \begin{enumerate}[label=\alph*.]
             \item v $ z_0\in\mathbb{C}$
             \item v $ \infty$
@@ -335,15 +337,39 @@
                 \item $\infty$ odstranitelná singularita:
                     \[\res_{\infty}f=\lim_{z\to\infty}z(f(\infty)-f(z))=\lim_{z\to\infty}z^2f'(z)\]
                 \item $\infty$ pól násobnosti $k\in\mathbb{N}$:
-                    \[\res f =\]
+                    \[\res f = \frac{(-1)^k}{(k+1)!}\lim_{z\to\infty}
+                    \left[z^{k+2}\frac{d^{k+1}}{dz^{k+1}}f(z)\right]\]
             \end{enumerate}
             \item Tvrzení (6.15)
                 f,g holomorfní v $z_0\in\mathbb{C},\:z_0$ je jednoduchý kořen $g$, pak
-                \[res_{z_0}\frac{f}{g}=\frac{f(z_0)}{g'/z_0}\]
+                \[\res_{z_0}\frac{f}{g}=\frac{f(z_0)}{g'/z_0}\]
             \item Trvzení (6.16)
                 f holomorfní v $z_0\in\mathbb{C}, g$ má v $z_0 $ jednonásobný pól pak
-                \[res_{z_0}(fg)=f(z_0)res_{z_0}g\]
+                \[\res_{z_0}(fg)=f(z_0)\res_{z_0}g\]
     \end{enumerate}
+
+    {\bf Příklad:}
+        Nalezněte rezidua funkce
+        \[f(z)=\frac{z^2}{(z^2+1)^2}\]
+        Ve všech izolovaných singularitách včetně bodu $\infty$.
+        \\
+        Singularity jsou $\pm\mi,\:\infty, \:\pm\mi$ jsou dvojnásobné singularity
+        \[\lim_{z\to\infty}\frac{z^2}{(z^2+1)^2}=0\:\Rightarrow\: \infty \mbox{ je odstranitelná singularita}\]
+
+        \[\underset{\mi}{\res}f=\frac{1}{1!}\lim_{z\to\mi}\frac{d}{dz}
+        \left[(z-\mi)^2\frac{z^2}{(z^2+1)^2}\right]=\lim_{z\to\mi}\frac{d}{dz}
+        \left[\frac{z^2}{(z^2+1)^2}\right]=\]
+        \[\lim_{z\to\mi}\frac{2z(z+\mi)^2-2(z+\mi)z^2}{(z+\mi)^4}=
+        \frac{2\mi(\mi+\mi)^2-2(\mi+\mi)\mi^2}{(\mi+\mi)^4}=-\frac{\mi}{4}\]
+        \\
+        \[\underset{-\mi}{\res}f=\frac{1}{1!}\lim_{z\to\mi}\frac{d}{dz}
+        \left[(z+\mi)^2\frac{z^2}{(z^2+1)^2}\right]=\lim_{z\to\mi}\frac{d}{dz}
+        \left[\frac{z^2}{(z^2-1)^2}\right]=\]
+        \[\lim_{z\to\mi}\frac{2z(z-\mi)^2-2(z-\mi)z^2}{(z-\mi)^4}=
+        \frac{2(-\mi)(-\mi-\mi)^2-2(-\mi-\mi)(-\mi)^2}{(-\mi-\mi)^4}=\frac{\mi}{4}\]
+        \\
+        \[\underset{\infty}{\res}=\lim_{t\to\infty}z^2f'(z)=
+        \lim_{z\to\infty}z^2\frac{2z(z^2+1)^2-2(z^2+1)zz^2}{(z^2+1)^4}=0\]
     \section{týden}%8
     \subsection{Reziduová věta}
         \[\int_Cf(z)dz=2\pi\mi\sum_{j=1}^{k}\underset{z_j}{\res f}\]
