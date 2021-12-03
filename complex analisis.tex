@@ -388,6 +388,16 @@
                 \[\int_{-\infty}^{\infty}R(x)e^{ix}dx=2\pi\mi\sum_{\underset{\underset{\im w>0}{w\mbox{ pól } R}}{w\in\mathbb{C}}}
                 \underset{z=w}{\res}R(z)e^{\mi z}+\pi\mi\sum_{\underset{w\in\mathbb{R}}{w\mbox{ pól }R}}R(z)e^{\mi z}\]
         \end{enumerate}
+
+    {\bf Příklad}
+    \\
+    Vypočtěte
+        \[\int_{-\infty}^{\infty}\frac{1}{x^4+5x^2+4}dx\]
+        \[f(z)=\frac{1}{z^4+5z^2+4}dz=\frac{1}{(z+\mi)(z-\mi)(z+2\mi)(z-2\mi)}\]
+        Singularity, které nás zajímají jsou $\mi$ a $2\mi$
+        \[\underset{z\to\mi}{\res}f=\lim_{z\to\mi}\frac{(z-\mi)}{(z+\mi)(z-\mi)(z+2\mi)(z-2\mi)}=\frac{1}{(2\mi)(3\mi)(-\mi)}=-\frac{1}{6}\mi\]
+        \[\underset{z\to2\mi}{\res}f=\lim_{z\to2\mi}\frac{(z-2\mi)}{(z+\mi)(z-\mi)(z+2\mi)(z-2\mi)}=\frac{1}{(3\mi)(\mi)(4\mi)}=\frac{1}{12}\mi\]
+        \[\int_{-\infty}^{\infty}\frac{1}{x^4+5x^2+4}dx=2\pi\mi\sum \res f=\frac{\pi}{6}\]
     \section{týden}%10S
         \subsection{Fourierova transformace}
         Základní gramatika
