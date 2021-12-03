@@ -370,10 +370,43 @@
         \\
         \[\underset{\infty}{\res}=\lim_{t\to\infty}z^2f'(z)=
         \lim_{z\to\infty}z^2\frac{2z(z^2+1)^2-2(z^2+1)zz^2}{(z^2+1)^4}=0\]
-    \section{týden}%8
+    \section{týden}%9
     \subsection{Reziduová věta}
         \[\int_Cf(z)dz=2\pi\mi\sum_{j=1}^{k}\underset{z_j}{\res f}\]
         \begin{enumerate}
             \item res
         \end{enumerate}
+    \subsection{Integrování reálných funkcí pomocí reziduové věty}
+        \begin{enumerate}
+            \item Racionální funkce $\frac{P}{Q}$, $\deg Q \geq \deg P+2$, na reálné ose
+                    póly nejvýše násobnosti 1
+                \[\int_{-\infty}^{\infty}\frac{P(x)}{Q(x)}dx=2\pi\mi\sum_{\underset{\underset{\im w>0}{Q(w)=0,}}{w\in\mathbb{C},}}
+                \underset{z=w}{\res}\frac{P(z)}{Q(z)}+\pi\mi\sum_{\underset{Q(w)=0}{w\in\mathbb{R}}}\underset{{z=w}}{\res}
+                \frac{P(z)}{Q(z)}\] 
+            \item Funkce $R(x)e^{ix},\:R$ racionální funkce s reálnými koeficienty,
+                $\lim_{z\to\infty} R(z)=0$, na reálné ose nejvýše póly násobnosti 1
+                \[\int_{-\infty}^{\infty}R(x)e^{ix}dx=2\pi\mi\sum_{\underset{\underset{\im w>0}{w\mbox{ pól } R}}{w\in\mathbb{C}}}
+                \underset{z=w}{\res}R(z)e^{\mi z}+\pi\mi\sum_{\underset{w\in\mathbb{R}}{w\mbox{ pól }R}}R(z)e^{\mi z}\]
+        \end{enumerate}
+    \section{týden}%10S
+        \subsection{Fourierova transformace}
+        Základní gramatika
+        \begin{center}
+            \begin{tabular}{|c|c|}
+                \hline
+                posun ve vzoru& $\mathcal{F}\{f(t-a)\}=e^{-\mi\omega a}\hat{f}(\omega),\quad a\in\mathbb{R})$ \\
+                posun v obraze&  $\mathcal{F}\{e^{\mi at}f(t)\}=\hat{f}(\omega-a), \quad a\in \mathbb{R}$\\
+                škálování& $\mathcal{F}\{f(at)\}=\frac{1}{|a|}\hat{f}\left(\frac{\omega}{a}\right),\quad a\in\mathbb{R}\setminus\{0\}$\\
+                konjungace& $\mathcal{F}\{\overline{f(-t)}\}=\overline{f(\omega)}$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+
+
+Za předpokladu že:
+\[\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n=e\]
+a
+\[\lim_{n\to\infty}\left(1-\frac{1}{n}\right)^n=\frac{1}{e}\]
+tak potom:
+\[\frac{1}{e}<1^{\infty}<e\]
 \end{document}
