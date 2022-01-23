@@ -209,7 +209,7 @@
         \[f(z):=\frac{az+b}{cz+d}\]
         Kruhová inverze
         \[\inv_k:\mathbb{C}\cup\{\infty\}\to\mathbb{C}\cup\{\infty\}\]
-        \[\inv_k(z)=s+\frac{z^2}{\overline{z-s}},\:z\in\mathbb{C}\cup\{\infty\}\]
+        \[\inv_k(z)=s+\frac{R^2}{\overline{z-s}},\:z\in\mathbb{C}\cup\{\infty\}\]
 
         Inverze vůči přímce\\
         V písemce budou jenom přímky rovnoběžné s Imaginární nebo Reálnou osou,
@@ -217,14 +217,21 @@
         musíme použít tyhle vzorečky.
         \[x_p=\frac{b^2x_1-a(by_1+c)}{a^2+b^2},\qquad 
         y_p=\frac{a^2y_1-b(ax_1+c)}{a^2+b^2}\]
-        \[\inv(x+iy)=2x_p-x_1+i(2y_p-y_1)\]
-
+        \[\inv(x+\mi y)=2x_p-x_1+\mi(2y_p-y_1)\]
+    {\bf Příklad:}
         Uvažujeme M\"{o}biovu transformace
         \[f(z):=\frac{z+\mi}{z-\mi}\]
 
         Na jaké množině v $\mathbb{C}\cup\{\infty\}$ zobrazí $f$ následující množina $M$?
         \[(a)M=\{z\in\mathbb{C}||z|\leq 1\}\]
         \[\mi\in k\Rightarrow\infty\in f(k)\: \mbox{ je přímka}\]
+        Provedem inverzi 
+        \[0+\frac{1^2}{\overline{\mi-0}}=\mi\]
+        \[f(\mi)=0\]
+        Je to přimka procházející 0, rovnoběžná na s imaginární osou
+        Zobrazením bodu z kružnice zjistíme, o jakou se jedná polorovinu.
+        \[f(0)=-1, \:\mbox{Jedná se o levou polorovinu}\]
+        \[\{z\in\mathbb{C}|\re\: z \leq 0\}\]
     \section{týden}
         \subsection{Křivkový integrál}
         Dá se spočítat třema způsobama
@@ -237,7 +244,7 @@
         \subsubsection{Z definice}
             \[\int_{C}f(z)dz=\int_{a}^{b}f(\varphi(t))\varphi'(t)dt=
             \int_C(u,-v)d\vec{S}+\mi\int_C(v,u)d\vec{S}\]
-        Jak parametrizovat?
+        %Jak parametrizovat?
         \\
         {\bf Příklad:}
         \[\int_C3z^2-2z\:dz\]
@@ -265,7 +272,7 @@
         \subsubsection{Cauchyho vzorec}
             \[\frac{1}{2\pi\mi}\int_C\frac{f(z)}{z-z_0}dz=f(z_0)\]
         zobecněný Cauchyho vzorec
-        \[\frac{n!}{2\pi\mi}\int_C\frac{f(z)}{(z-z_0)^{n-1}}dz=f^{(n)}(z_0)\]
+        \[\frac{n!}{2\pi\mi}\int_C\frac{f(z)}{(z-z_0)^{n+1}}dz=f^{(n)}(z_0)\]
         \\
         {\bf Příklad:}
         \[\label{eq1}\int_C\frac{1}{z(z^2-1)dz}\]
@@ -387,6 +394,14 @@
                 $\lim_{z\to\infty} R(z)=0$, na reálné ose nejvýše póly násobnosti 1
                 \[\int_{-\infty}^{\infty}R(x)e^{ix}dx=2\pi\mi\sum_{\underset{\underset{\im w>0}{w\mbox{ pól } R}}{w\in\mathbb{C}}}
                 \underset{z=w}{\res}R(z)e^{\mi z}+\pi\mi\sum_{\underset{w\in\mathbb{R}}{w\mbox{ pól }R}}R(z)e^{\mi z}\]
+                \begin{enumerate}[label=\alph*.]
+                    \item R jako výše
+                    \[\int_{-\infty}^{\infty}R(x)\cos x\:dx=\re \int_{-\infty}^{\infty}R(x)e^{\mi x}dx\]
+                    \[\int_{-\infty}^{\infty}R(x)\sin x\:dx=\im \int_{-\infty}^{\infty}R(x)e^{\mi x}dx\]
+                \end{enumerate}
+            \item Funkce $R \cos x, \sin x, \: R$ racionální funkce definovaná na jednotokové kružnici v $\mathbb{R}^2$
+                \[\int_{0}^{2\pi}R(\cos,\sin x)dx=\int_CR\left(\frac{z^2+1}{2z},\frac{z^2-1}{2\mi z}\right)\cdot\frac{1}{\mi z}dz,\]
+                Kde $C$ je kladně orientovaná jednotková kružnice v $\mathbb{C}$
         \end{enumerate}
 
     {\bf Příklad}
@@ -413,10 +428,5 @@
         \end{center}
 
 
-Za předpokladu že:
-\[\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n=e\]
-a
-\[\lim_{n\to\infty}\left(1-\frac{1}{n}\right)^n=\frac{1}{e}\]
-tak potom:
-\[\frac{1}{e}<1^{\infty}<e\]
+
 \end{document}
