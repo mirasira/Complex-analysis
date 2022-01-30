@@ -349,7 +349,7 @@
             \end{enumerate}
             \item Tvrzení (6.15)
                 f,g holomorfní v $z_0\in\mathbb{C},\:z_0$ je jednoduchý kořen $g$, pak
-                \[\res_{z_0}\frac{f}{g}=\frac{f(z_0)}{g'/z_0}\]
+                \[\res_{z_0}\frac{f}{g}=\frac{f(z_0)}{g'(z_0)}\]
             \item Trvzení (6.16)
                 f holomorfní v $z_0\in\mathbb{C}, g$ má v $z_0 $ jednonásobný pól pak
                 \[\res_{z_0}(fg)=f(z_0)\res_{z_0}g\]
@@ -400,7 +400,7 @@
                     \[\int_{-\infty}^{\infty}R(x)\sin x\:dx=\im \int_{-\infty}^{\infty}R(x)e^{\mi x}dx\]
                 \end{enumerate}
             \item Funkce $R \cos x, \sin x, \: R$ racionální funkce definovaná na jednotokové kružnici v $\mathbb{R}^2$
-                \[\int_{0}^{2\pi}R(\cos,\sin x)dx=\int_CR\left(\frac{z^2+1}{2z},\frac{z^2-1}{2\mi z}\right)\cdot\frac{1}{\mi z}dz,\]
+                \[\int_{0}^{2\pi}R(\cos x,\sin x)dx=\int_CR\left(\frac{z^2+1}{2z},\frac{z^2-1}{2\mi z}\right)\cdot\frac{1}{\mi z}dz,\]
                 Kde $C$ je kladně orientovaná jednotková kružnice v $\mathbb{C}$
         \end{enumerate}
 
@@ -415,6 +415,8 @@
         \[\int_{-\infty}^{\infty}\frac{1}{x^4+5x^2+4}dx=2\pi\mi\sum \res f=\frac{\pi}{6}\]
     \section{týden}%10S
         \subsection{Fourierova transformace}
+        \[\hat{f}(\omega)=\int_{-\infty}^{\infty} f(t)e^{-i\omega t}dt,\qquad \omega \in \mathbb{R} \quad \mbox{přímá FT}\]
+        \[\check{f}(\omega)=\int_{-\infty}^{\infty} f(t)e^{-i\omega t}dt,\qquad \omega \in \mathbb{R} \quad \mbox{inverzní FT}\]
         Základní gramatika
         \begin{center}
             \begin{tabular}{|c|c|}
@@ -426,7 +428,14 @@
                 \hline
             \end{tabular}
         \end{center}
-
+    \section{týden}%11S
+        \subsection{Fourierova transformace}
+    \section{týden}%12S
+        \subsection{Laplaceova transformace} 
+    \section{týden}%13S
+        \subsection{Transformace Z}
+    \section{týden}%14S
+        \subsection{Transformace Z}
 
 
 \end{document}
